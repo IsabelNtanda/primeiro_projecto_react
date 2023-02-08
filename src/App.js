@@ -1,12 +1,31 @@
-import Nome from './components/Nome'
+import { useState } from "react";
+
 function App(){
+  const[input,setInput] = useState()
+  const [tarefas,setTarefas] = useState(['pagar a conta de luz','Estudar js'])
+  function handleRegister(e){
+    e.preventDefault()
+   setTarefas([...tarefas, input])
+   setInput('')
+  }
 return(
   <div>
-    <h1>Componentes</h1>
-    <Nome aluno='Isabel' idade={30}/>
-    <br />
-    <Nome aluno='Pereira' idade={25}/>
+    <h1>Cadastrando usuario</h1>
+    <form action="" onSubmit={handleRegister}>
+      <label>Nome da tarefa:</label>
+      <input type="text" value={input} onChange={(e)=>setInput(e.target.value)} />
+      <br /><br />
+
+      <button type="submit">Registrar</button>
+    </form>
+  
+    <ul>
+     {tarefas.map( tarefa =>(
+      <li key={tarefa}>{tarefa}</li>
+      ))}
+    </ul>
   </div>
+  
   
   )
 
