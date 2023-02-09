@@ -1,19 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function App(){
-  const[input,setInput] = useState('')
+  const[input,setInput] = useState()
   const [tarefas,setTarefas] = useState(['pagar a conta de luz','Estudar js'])
-
-  useEffect(()=>{
-  const tarefasStorage = localStorage.getItem('@tarefa')
-  if(tarefasStorage){
-  setTarefas(JSON.parse(tarefasStorage))
-  }
-  },[])
-  useEffect(()=>{
-  localStorage.setItem('@tarefas', JSON.stringify(tarefas))
-  
-  },[tarefas])
   function handleRegister(e){
     e.preventDefault()
    setTarefas([...tarefas, input])

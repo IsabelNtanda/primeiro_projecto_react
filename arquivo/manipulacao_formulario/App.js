@@ -41,8 +41,6 @@ return(
       <span>Idade:{user.idade}</span>
     </div>
   </div>
-  
-  
   )
 
 }
