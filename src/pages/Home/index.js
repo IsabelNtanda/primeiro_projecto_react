@@ -6,7 +6,8 @@ return(
     <span>Sujeito programador</span> <br /> <br />
     <Link to='/sobre'>Sobre</Link> <br /> <br />
     <Link to='/contato'>Contato</Link>
- 
+    <hr />
+    <Link to='/produto/2345'>Acessar Produto 12345</Link>
   </div>
   )
 }
