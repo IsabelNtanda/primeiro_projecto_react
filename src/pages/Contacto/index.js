@@ -6,7 +6,6 @@ return(
   <span>Contacto da empresa (add)</span> <br /> <br />
   <Link to='/'>Home</Link> <br /> <br />
   <Link to='/contato'>Sobre</Link>
-
 </div>
   )
 }
